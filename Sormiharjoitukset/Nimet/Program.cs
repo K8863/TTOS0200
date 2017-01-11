@@ -1,9 +1,10 @@
 ﻿using System;
 
-/* Sormiharjoitus: Käyttäjien nimet aakkosjärjestykseen
- * Tee ohjelma joka kysyy käyttäjältä viisi (5) etunimeä. Tämän jälkeen ohjelma näyttää nimet annetussa järjestyksessä sekä aakkosjärjestyksessä. */
+/* Sormiharjoitus: Käyttäjien nimet aakkosjärjestykseen.
+ * Tee ohjelma joka kysyy käyttäjältä viisi (5) etunimeä. 
+ * Tämän jälkeen ohjelma näyttää nimet annetussa järjestyksessä sekä aakkosjärjestyksessä. */
 
-namespace Sormiharjoitus1
+namespace Nimet
 {
     class Program
     {
