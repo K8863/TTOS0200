@@ -1,5 +1,0 @@
-D:\JAMK\Olio-ohjelmointi\GitHub\Sormiharjoitukset\Nimet\bin\Debug\Nimet.exe.config
-D:\JAMK\Olio-ohjelmointi\GitHub\Sormiharjoitukset\Nimet\bin\Debug\Nimet.exe
-D:\JAMK\Olio-ohjelmointi\GitHub\Sormiharjoitukset\Nimet\bin\Debug\Nimet.pdb
-D:\JAMK\Olio-ohjelmointi\GitHub\Sormiharjoitukset\Nimet\obj\Debug\Nimet.exe
-D:\JAMK\Olio-ohjelmointi\GitHub\Sormiharjoitukset\Nimet\obj\Debug\Nimet.pdb
