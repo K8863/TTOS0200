@@ -1,6 +1,10 @@
-﻿/* Sormiharjoitus: Lotto 7/40.
- * Suomalaisessa Lotossa arvotaan seitsemän (7) numeroa 40:sta. 
- * Tee ohjelma, joka arpoo käyttäjän haluaman määrän Lotto-rivejä. */
+﻿/* Kurssi: TTOS0200 Olio-ohjelmointi
+ * Tehtävä: Sormiharjoitus - Lotto 7/40
+ * Tekijä: Niia Neuvonen K8863
+ * Pvm: 9.1.2017
+ * Kuvaus: 
+ *          Suomalaisessa Lotossa arvotaan seitsemän (7) numeroa 40:sta. 
+ *          Tee ohjelma, joka arpoo käyttäjän haluaman määrän Lotto-rivejä. */
 
 using System;
 using System.Linq;
@@ -23,6 +27,7 @@ namespace Lotto
             int rivit = int.Parse(Console.ReadLine());
             int b = 0;
 
+            // Lototaan kunnes haluttujen rivien määrä tulee täyteen
             while (b < rivit)
             {
                 // Numerot taulukkoon
@@ -38,11 +43,12 @@ namespace Lotto
                     // Tarkistetaan onko luku jo voittonumeroissa
                     if (voittonumerot.Contains(rand))
                     {
+                        // Jos on, niin arvotaan uusi numero
                         i--;
                     }
-                    // Jos ei, niin tallennetaan se voittonumeroihin
                     else
                     {
+                        // Jos ei, niin tallennetaan se voittonumeroihin
                         voittonumerot[i] = rand;
                     }
                 }
