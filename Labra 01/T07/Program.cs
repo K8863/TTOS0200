@@ -22,15 +22,7 @@ namespace T07
             int vuosi = int.Parse(Console.ReadLine());
 
             // Tarkistetaan onko karkausvuosi
-            if (vuosi % 400 == 0)
-            {
-                Console.WriteLine("Vuosi {0} on karkausvuosi.", vuosi);
-            }
-            else if (vuosi % 100 == 0)
-            {
-                Console.WriteLine("Vuosi {0} ei ole karkausvuosi.", vuosi);
-            }
-            else if (vuosi % 4 == 0)
+            if ((vuosi % 4 == 0 && vuosi % 100 != 0) || (vuosi % 400 == 0))
             {
                 Console.WriteLine("Vuosi {0} on karkausvuosi.", vuosi);
             }
