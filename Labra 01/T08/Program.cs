@@ -29,8 +29,7 @@ namespace T08
                 luvut[i] = int.Parse(Console.ReadLine());
             }
             // Tulostetaan suurin luku
-            int suurin = luvut.Max();
-            Console.WriteLine("Suurin luku on " + suurin);
+            Console.WriteLine("Suurin luku on " + luvut.Max());
         }
     }
 }
