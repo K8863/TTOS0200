@@ -9,7 +9,8 @@ namespace JAMK.IT
     public class Pesukone
     {
         public bool OnkoKäynnissä { get; set; }
-        public int Koko { get; set; }
+        public int Kapasiteetti { get; set; }
+        public string Energialuokka { get; set; }
         public string Merkki { get; set; }
     }
 }

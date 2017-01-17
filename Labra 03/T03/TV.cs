@@ -11,5 +11,6 @@ namespace JAMK.IT
         public bool OnkoPäällä { get; set; }
         public int Koko { get; set; }
         public string Merkki { get; set; }
+        public string Näyttö { get; set; }
     }
 }

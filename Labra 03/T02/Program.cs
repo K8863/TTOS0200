@@ -30,12 +30,14 @@ namespace T02
             Pesukone pesukone = new JAMK.IT.Pesukone();
             // Annetaan oliolle arvot
             pesukone.Merkki = "LG";
-            pesukone.Koko = 8;
+            pesukone.Energialuokka = "A";
+            pesukone.Kapasiteetti = 8;
             pesukone.OnkoKäynnissä = true;
             // Tulostetaan tiedot
             Console.WriteLine("PESUKONE\n");
             Console.WriteLine("Merkki: {0}", pesukone.Merkki);
-            Console.WriteLine("Koko: {0} kg", pesukone.Koko);
+            Console.WriteLine("Energialuokka: {0}", pesukone.Energialuokka);
+            Console.WriteLine("Kapasiteetti: {0} kg", pesukone.Kapasiteetti);
             Console.WriteLine("Käynnissä: {0}", pesukone.OnkoKäynnissä);
         }
     }

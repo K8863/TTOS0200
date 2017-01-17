@@ -30,11 +30,13 @@ namespace T03
             // Annetaan oliolle arvot
             televisio.Merkki = "Samsung";
             televisio.Koko = 45;
+            televisio.Näyttö = "LED";
             televisio.OnkoPäällä = true;
             // Tulostetaan tiedot
             Console.WriteLine("TELEVISIO\n");
             Console.WriteLine("Merkki: {0}", televisio.Merkki);
             Console.WriteLine("Koko: {0} tuumaa", televisio.Koko);
+            Console.WriteLine("Näyttö: {0}", televisio.Näyttö);
             Console.WriteLine("Päällä: {0}", televisio.OnkoPäällä);
         }
     }
