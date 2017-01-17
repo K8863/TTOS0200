@@ -10,9 +10,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using JAMK.IT;
 
 namespace T05
@@ -21,14 +18,22 @@ namespace T05
     {
         static void Main(string[] args)
         {
-            OpiskelijaHallinta();
+            OpiskelijaTiedot();
         }
 
-        static void OpiskelijaHallinta()
+        static void OpiskelijaTiedot()
         {
-            Opiskelija a = new JAMK.IT.Opiskelija("Matti", 25, "K8912");
-            Opiskelija b = new JAMK.IT.Opiskelija("Mauno", 21, "K9771");
-            Opiskelija c = new JAMK.IT.Opiskelija("Jaana", 23, "K9155");
+            // Luodaan opiskelijat
+            List<Opiskelija> lista = new List<Opiskelija>();
+            lista.Add(new Opiskelija("Matti", 25, "K8912"));
+            lista.Add(new Opiskelija("Mauno", 21, "K9771"));
+            lista.Add(new Opiskelija("Jaana", 23, "K9155"));
+
+            // Tulostetaan opiskelijoiden tiedot
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.WriteLine("{0} {1} {2}", lista[i].Nimi, lista[i].Ika, lista[i].Tunnus);
+            }
         }
     }
 }

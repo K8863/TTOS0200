@@ -9,14 +9,14 @@ namespace JAMK.IT
     public class Opiskelija
     {
         public int Ika { get; set; }
-        public string Luokka { get; set; }
         public string Nimi { get; set; }
+        public string Tunnus { get; set; }
 
-        public Opiskelija(string Name, int Age, string Class) 
+        public Opiskelija(string Name, int Age, string ID) 
         {
             Nimi = Name;
             Ika = Age;
-            Luokka = Class;
+            Tunnus = ID;
         }
     }
 }
