@@ -1,7 +1,7 @@
 ﻿/* Kurssi: TTOS0200 Olio-ohjelmointi
  * Tehtävä: Labra 03 - Tehtävä 3
  * Tekijä: Niia Neuvonen K8863
- * Pvm: 16.1.2017
+ * Pvm: 17.1.2017
  * Kuvaus: 
  *          Tehtävänäsi on ohjelmoida television toiminta. 
  *          Samoin kuin edellinen tehtävä: mitä ominaisuuksia ja toimintoja tekisit Televisio-luokkaan?
