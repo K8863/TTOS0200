@@ -22,12 +22,11 @@ namespace JAMK.IT
         }
 
         // Palauttaa kaikki auton ominaisuudet yhtenä merkkijonona
-        public string ToString()
+        public override string ToString()
         {
             string merkkijono;
             merkkijono = Name + ", nopeus " + Speed + " km/h, renkaiden koko " + Tyres + " tuumaa";
             return merkkijono;
         }
-        
     }
 }

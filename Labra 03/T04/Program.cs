@@ -35,9 +35,7 @@ namespace T04
             // Tulostetaan ominaisuudet
             vehicle.PrintData();
             // Tulostetaan ominaisuudet yhtenä merkkijonona
-            string merkkijono;
-            merkkijono = vehicle.ToString();
-            Console.WriteLine("\n" + merkkijono + "\n");
+            Console.WriteLine(vehicle.ToString());
         }
     }
 }
