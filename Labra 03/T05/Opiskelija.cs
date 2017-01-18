@@ -12,11 +12,11 @@ namespace JAMK.IT
         public string Nimi { get; set; }
         public string Tunnus { get; set; }
 
-        public Opiskelija(string Name, int Age, string ID) 
+        public Opiskelija(string name, int age, string id) 
         {
-            Nimi = Name;
-            Ika = Age;
-            Tunnus = ID;
+            Nimi = name;
+            Ika = age;
+            Tunnus = id;
         }
     }
 }
