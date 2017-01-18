@@ -32,7 +32,6 @@ namespace T02
             pesukone.Merkki = "LG";
             pesukone.Energialuokka = "A";
             pesukone.Kapasiteetti = 8;
-            pesukone.OnkoKäynnissä = true;
             // Tulostetaan tiedot
             Console.WriteLine("PESUKONE\n");
             Console.WriteLine("Merkki: {0}", pesukone.Merkki);

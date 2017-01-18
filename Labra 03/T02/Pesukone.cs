@@ -12,5 +12,9 @@ namespace JAMK.IT
         public int Kapasiteetti { get; set; }
         public string Energialuokka { get; set; }
         public string Merkki { get; set; }
+        public Pesukone()
+        {
+            OnkoKäynnissä = true;
+        }
     }
 }
