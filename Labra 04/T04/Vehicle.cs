@@ -18,7 +18,7 @@ namespace JAMK.IT
         {
         }
 
-        // Return NPC data as one string
+        // Return Vehicle data as one string
         public override string ToString()
         {
             return "- Name: " + Name + ", Model: " + Model + ", Year: " + Year + ", Color: " + Color;
