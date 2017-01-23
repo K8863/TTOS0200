@@ -16,7 +16,7 @@ namespace JAMK.IT
         {
         }
 
-        // Return NPC data as one string
+        // Return Boss data as one string
         public override string ToString()
         {
             return base.ToString() + ", Car: " + Car + ", Bonus: " + Bonus;

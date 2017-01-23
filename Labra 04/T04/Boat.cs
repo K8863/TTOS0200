@@ -16,7 +16,7 @@ namespace JAMK.IT
         {
         }
 
-        // Return NPC data as one string
+        // Return Boat data as one string
         public override string ToString()
         {
             return base.ToString() + ", Seat Count: " + SeatCount + ", Boat Type: " + BoatType;

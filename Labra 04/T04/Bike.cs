@@ -16,7 +16,7 @@ namespace JAMK.IT
         {
         }
 
-        // Return NPC data as one string
+        // Return Bike data as one string
         public override string ToString()
         {
             return base.ToString() + ", Gear Wheels: " + GearWheels + ", Gear Name: " + GearName;

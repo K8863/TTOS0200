@@ -17,7 +17,7 @@ namespace JAMK.IT
         {
         }
 
-        // Return NPC data as one string
+        // Return Employee data as one string
         public override string ToString()
         {
             return "- Name: " + Name + ", Profession: " + Profession + ", Salary: " + Salary;
