@@ -86,6 +86,7 @@ namespace T03
             Nisakkaat.Add(new Vauva("Paavo", 4, 50, 1, "täynnä"));
             Nisakkaat.Add(new Aikuinen("Marja", 58, 155, 43, "Nissan Note"));
             Nisakkaat.Add(new Ihminen("Topi", 61, 174, 17));
+            Nisakkaat.Add(new Vauva("Gilderoy", 6, 54, 2, "tyhjä"));
 
             foreach (Nisakas nisakas in Nisakkaat)
             {
