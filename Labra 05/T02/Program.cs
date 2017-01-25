@@ -42,7 +42,7 @@ namespace T02
             string s = "Jääkaapin sisältö:\n\n";
             foreach (Item item in Items)
             {
-                if (item != null) s += item.ToString();
+                s += item.ToString();
             }
             return s;
         }

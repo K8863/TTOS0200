@@ -46,7 +46,7 @@ namespace T04
             string s = "Chest contents\n\n";
             foreach (Item item in Items)
             {
-                if (item != null) s += item.ToString();
+                s += item.ToString();
             }
             return s;
         }

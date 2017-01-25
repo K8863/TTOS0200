@@ -39,10 +39,7 @@ namespace T02
         public string Duration { get; set; }
 
         public Song(string name, string duration)
-        {
-            Name = name;
-            Duration = duration;
-        }
+        { Name = name; Duration = duration; }
 
         public override string ToString()
         {
@@ -67,10 +64,10 @@ namespace T02
 
         public override string ToString()
         {
-            string s = Artist + ": " + Title + " (" + Year + ")\n\n";
+            string s = Artist + " - " + Title + " (" + Year + ")\n\n";
             foreach (Song song in Songs)
             {
-                if (song != null) s += song.ToString();
+                s += song.ToString();
             }
             return s;
         }
