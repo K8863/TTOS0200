@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 namespace T04
 {
-    public class Item
+    class Item
     {
         public string Name { get; set; }
         public double Weight { get; set; }
@@ -32,7 +32,7 @@ namespace T04
         }
     }
 
-    public class Chest
+    class Chest
     {
         public List<Item> Items = new List<Item>();
 
@@ -43,7 +43,7 @@ namespace T04
 
         public override string ToString()
         {
-            string s = "LOOT CHEST CONTENTS\n\n";
+            string s = "Chest contents\n\n";
             foreach (Item item in Items)
             {
                 if (item != null) s += item.ToString();

@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace T02
 {
-    public class Item
+    class Item
     {
         public string Name { get; set; }
         public int Quantity { get; set; }
@@ -28,7 +28,7 @@ namespace T02
         }
     }
  
-    public class Fridge
+    class Fridge
     {
         public List<Item> Items = new List<Item>();
 
@@ -39,7 +39,7 @@ namespace T02
 
         public override string ToString()
         {
-            string s = "Jääkaapin sisältö:\n";
+            string s = "Jääkaapin sisältö:\n\n";
             foreach (Item item in Items)
             {
                 if (item != null) s += item.ToString();
