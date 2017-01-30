@@ -37,14 +37,12 @@ namespace T02
     {
         public string Name { get; set; }
         public string Duration { get; set; }
-
-        public Song(string name, string duration)
-        { Name = name; Duration = duration; }
-
         public override string ToString()
         {
             return Name + " " + Duration + "\n";
         }
+        public Song(string name, string duration)
+        { Name = name; Duration = duration; }
     }
 
     class Cd
@@ -53,15 +51,6 @@ namespace T02
         public string Title { get; set; }
         public int Year { get; set; }
         public List<Song> Songs = new List<Song>();
-
-        public Cd(string artist, string title, int year)
-        { Artist = artist; Title = title; Year = year; }
-
-        public void AddSong(Song song)
-        {
-            Songs.Add(song);
-        }
-
         public override string ToString()
         {
             string s = Artist + " - " + Title + " (" + Year + ")\n\n";
@@ -71,7 +60,12 @@ namespace T02
             }
             return s;
         }
-
+        public void AddSong(Song song)
+        {
+            Songs.Add(song);
+        }
+        public Cd(string artist, string title, int year)
+        { Artist = artist; Title = title; Year = year; }
     }
     class Program
     {
