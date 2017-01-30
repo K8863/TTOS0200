@@ -73,7 +73,6 @@ namespace T02
         {
             CdData();
         }
-
         static void CdData()
         {
             Cd cd = new Cd("Moonsorrow", "Voimasta ja kunniasta", 2001);
