@@ -41,25 +41,18 @@ namespace T03
         {
             try
             {
-                double d;
-                int i;
-                string s;
+                double d; int i; string s;
                 List<double> Doubles = new List<double>();
                 List<int> Integers = new List<int>();
 
+                // Ask for numbers and add them to appropriate lists
                 do
                 {
-                    Console.WriteLine("Give a number > ");
+                    Console.Write("Give a number > ");
                     s = Console.ReadLine();
 
-                    if (int.TryParse(s, out i))
-                    {
-                        Integers.Add(i);
-                    }
-                    else if (double.TryParse(s, out d))
-                    {
-                        Doubles.Add(d);
-                    }
+                    if (int.TryParse(s, out i)) { Integers.Add(i); }
+                    else if (double.TryParse(s, out d)) { Doubles.Add(d); }
                 }
                 while (int.TryParse(s, out i) || double.TryParse(s, out d));
 
@@ -81,6 +74,27 @@ namespace T03
             catch (Exception e)
             {
                 throw e;
+            }
+
+            // Read integers from file
+            try
+            {
+                string text = System.IO.File.ReadAllText("T3integers.txt");
+                System.Console.WriteLine("\nContents of T3integers:\n" + text);
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File not found (FileNotFoundException)");
+            }
+            // Read doubles from file
+            try
+            {
+                string text = System.IO.File.ReadAllText("T3doubles.txt");
+                System.Console.WriteLine("\nContents of T3doubles:\n" + text);
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File not found (FileNotFoundException)");
             }
         }
     }
