@@ -29,9 +29,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace T03
 {
@@ -71,16 +68,16 @@ namespace T03
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                Console.WriteLine(ex.Message);
             }
 
             // Read integers from file
             try
             {
-                string text = System.IO.File.ReadAllText("T3integers.txt");
-                System.Console.WriteLine("\nContents of T3integers:\n" + text);
+                string text = File.ReadAllText("T3integers.txt");
+                Console.WriteLine("\nContents of T3integers:\n" + text);
             }
             catch (FileNotFoundException)
             {
@@ -89,8 +86,8 @@ namespace T03
             // Read doubles from file
             try
             {
-                string text = System.IO.File.ReadAllText("T3doubles.txt");
-                System.Console.WriteLine("\nContents of T3doubles:\n" + text);
+                string text = File.ReadAllText("T3doubles.txt");
+                Console.WriteLine("\nContents of T3doubles:\n" + text);
             }
             catch (FileNotFoundException)
             {

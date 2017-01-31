@@ -3,7 +3,7 @@
  * Tekijä: Niia Neuvonen K8863
  * Pvm: 30.1.2017
  * Kuvaus: 
- *          Tee ohjelma, joka lukee yksinkertaisesta tekstitiedosto nimet.txt henkilöitten nimiä ja 
+ *          Tee ohjelma, joka lukee yksinkertaisesta tekstitiedostosta nimet.txt henkilöitten nimiä ja 
  *          kertoo montako nimeä löytyy ja montako kertaa kukin nimi esiintyy. 
  *          Kopioi (tai luo itse vastaava tiedosto) D:\Temp -kansioon ja ohjelmoi koodisi tarkistamaan onko 
  *          em.hakemistossa tiedostoa. Käytä File.Exist-metodia. 
@@ -26,9 +26,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace T02
 {
@@ -36,30 +33,44 @@ namespace T02
     {
         static void Main(string[] args)
         {
+            NameCheck();
+        }
+        static void NameCheck()
+        {
+            int numberOfLines = 0;
+            int numberOfNames = 0;
+            string path = @"d:\Temp\nimet.txt";
+            var countNames = new Dictionary<string, int>();
+
             try
             {
-                string path = @"d:\Temp\nimet.txt";
-                // Check if file exists
                 if (File.Exists(path))
                 {
-                    int numberOfLines = System.IO.File.ReadAllLines(path).Count();
-                    int numberOfUniqueLines = System.IO.File.ReadAllLines(path).Distinct().Count();
-                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfUniqueLines);
-
-                    // List of all names
-                    List<string> lines = File.ReadAllLines(path).ToList();
-
-                    // List of distinct names
-                    List<string> distinct = lines.Distinct().ToList();
-                    foreach (string line in distinct)
+                    foreach (string s in File.ReadAllLines(path))
                     {
-                        Console.WriteLine(line);
+                        if (countNames.ContainsKey(s))
+                        {
+                            countNames[s] = countNames[s] + 1;
+                        }
+                        else
+                        {
+                            countNames.Add(s, 1);
+                            numberOfNames++;
+                        }
+                        numberOfLines++;
                     }
-                }              
+
+                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfNames);
+
+                    foreach (var pair in countNames)
+                    {
+                        Console.WriteLine("Name {0} - {1} times", pair.Key, pair.Value);
+                    }
+                }
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                Console.WriteLine("File not found (FileNotFoundException)");
+                Console.WriteLine(ex.Message);
             }
         }
     }

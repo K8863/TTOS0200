@@ -25,11 +25,7 @@
  *              Jorma */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace T01
 {
@@ -37,12 +33,12 @@ namespace T01
     {
         static void Main(string[] args)
         {
-            System.IO.StreamWriter outputFile = null;
+            StreamWriter outputFile = null;
 
             // Write input lines to file
             try
             {
-                outputFile = new System.IO.StreamWriter("T1TextLines.txt");
+                outputFile = new StreamWriter("T1TextLines.txt");
                 string input;
                 while (true)
                 {
@@ -69,8 +65,8 @@ namespace T01
             // Read lines from file
             try
             {
-                string text = System.IO.File.ReadAllText("T1TextLines.txt");
-                System.Console.WriteLine("Contents of T1TextLines.txt:\n" + text);
+                string text = File.ReadAllText("T1TextLines.txt");
+                Console.WriteLine("Contents of T1TextLines.txt:\n" + text);
             }
             catch (FileNotFoundException)
             {
