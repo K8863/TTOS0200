@@ -38,15 +38,24 @@ namespace T02
         {
             try
             {
-                string[] lines = System.IO.File.ReadAllLines(@"d:\Temp\nimet.txt");
-                foreach (string line in lines)
+                string path = @"d:\Temp\nimet.txt";
+                // Check if file exists
+                if (File.Exists(path))
                 {
-                    Console.WriteLine(line);
-                }
-                int numberOfLines = System.IO.File.ReadAllLines(@"d:\Temp\nimet.txt").Count();
-                Console.WriteLine("Number of lines: " + numberOfLines);
-                int numberOfUniqueLines = System.IO.File.ReadAllLines(@"d:\Temp\nimet.txt").Distinct().Count();
-                Console.WriteLine("Number of names: " + numberOfUniqueLines);
+                    int numberOfLines = System.IO.File.ReadAllLines(path).Count();
+                    int numberOfUniqueLines = System.IO.File.ReadAllLines(path).Distinct().Count();
+                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfUniqueLines);
+
+                    // List of all names
+                    List<string> lines = File.ReadAllLines(path).ToList();
+
+                    // List of distinct names
+                    List<string> distinct = lines.Distinct().ToList();
+                    foreach (string line in distinct)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }              
             }
             catch (FileNotFoundException)
             {
