@@ -21,7 +21,9 @@
  *              Nimi Netta esiintyy 2 kertaa
  *              Nimi Matias esiintyy 1 kertaa
  *              Nimi Otto esiintyy 1 kertaa
- *              Press any key to continue . . . */
+ *              Press any key to continue . . . 
+ *              
+ *          Bonustehtävä: Lajittele nimet aakkosjärjestykseen ennen tulostusta. */
 
 using System;
 using System.Collections.Generic;
@@ -61,18 +63,18 @@ namespace T02
                         numberOfLines++;
                     }
 
-                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfNames);
+                    Console.WriteLine("Found {0} lines and {1} names:\n", numberOfLines, numberOfNames);
 
                     foreach (var pair in countNames)
                     {
                         Console.WriteLine("Name {0} - {1} times", pair.Key, pair.Value);
                     }
 
-                    var AakkostettuLista = countNames.Keys.ToList();
-                    AakkostettuLista.Sort();
+                    var alphabeticalNames = countNames.Keys.ToList();
+                    alphabeticalNames.Sort();
                     Console.WriteLine();
-                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfNames);
-                    foreach (var key in AakkostettuLista)
+                    Console.WriteLine("Found {0} lines and {1} names, in alphabetical order:\n", numberOfLines, numberOfNames);
+                    foreach (var key in alphabeticalNames)
                     {
                         Console.WriteLine("Name {0} - {1} times", key, countNames[key]);
                     }
