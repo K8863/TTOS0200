@@ -26,6 +26,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace T02
 {
@@ -65,6 +66,15 @@ namespace T02
                     foreach (var pair in countNames)
                     {
                         Console.WriteLine("Name {0} - {1} times", pair.Key, pair.Value);
+                    }
+
+                    var AakkostettuLista = countNames.Keys.ToList();
+                    AakkostettuLista.Sort();
+                    Console.WriteLine();
+                    Console.WriteLine("Found {0} lines and {1} names.\n", numberOfLines, numberOfNames);
+                    foreach (var key in AakkostettuLista)
+                    {
+                        Console.WriteLine("Name {0} - {1} times", key, countNames[key]);
                     }
                 }
             }
