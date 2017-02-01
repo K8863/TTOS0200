@@ -46,23 +46,30 @@ namespace T04
             programmes.Add(new Programme("Wild Scotland", "Nat Geo Wild", "22:15", "23:03", "Scotland's Hebrides are Europe's final frontier against the unpredictable Atlantic. Ewan McGregor narrates the story of animal life there."));
             programmes.Add(new Programme("Life", "BBC Knowledge", "19:50", "20:40", "Journeying into the uncharted corners of the ocean, discover why a Pacific giant octopus makes the ultimate sacrifice to protect her young."));
 
-            // Write
-            Stream writeStream = new FileStream("MyProgrammes.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            IFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(writeStream, programmes);
-            writeStream.Close();
-
-            // Read
-            Stream openStream = new FileStream("MyProgrammes.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Programme> readProgrammes = (List<Programme>)formatter.Deserialize(openStream);
-            openStream.Close();
-
-            // Print
-            Console.WriteLine("TV GUIDE\n");
-            foreach (Programme p in readProgrammes)
+            try
             {
-                Console.WriteLine(p.ToString());
+                // Write
+                Stream writeStream = new FileStream("MyProgrammes.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                IFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(writeStream, programmes);
+                writeStream.Close();
+
+                // Read
+                Stream openStream = new FileStream("MyProgrammes.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Programme> readProgrammes = (List<Programme>)formatter.Deserialize(openStream);
+                openStream.Close();
+
+                // Print
+                Console.WriteLine("TV GUIDE\n");
+                foreach (Programme p in readProgrammes)
+                {
+                    Console.WriteLine(p.ToString());
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }  
         }
     }
 }
