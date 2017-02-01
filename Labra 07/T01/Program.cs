@@ -33,12 +33,10 @@ namespace T01
     {
         static void Main(string[] args)
         {
-            StreamWriter outputFile = null;
-
-            // Write input lines to file
             try
             {
-                outputFile = new StreamWriter("T1TextLines.txt");
+                // Write input lines to file
+                StreamWriter outputFile = new StreamWriter("T1TextLines.txt");
                 string input;
                 while (true)
                 {
@@ -48,23 +46,10 @@ namespace T01
                     {
                         break;
                     }
-                }              
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                if (outputFile != null)
-                {
-                    outputFile.Close();
                 }
-            }
-            
-            // Read lines from file
-            try
-            {
+                outputFile.Close();
+
+                // Read lines from file     
                 string text = File.ReadAllText("T1TextLines.txt");
                 Console.WriteLine("Contents of T1TextLines.txt:\n" + text);
             }
