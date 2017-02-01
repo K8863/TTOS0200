@@ -79,9 +79,9 @@ namespace T03
                 string text = File.ReadAllText("T3integers.txt");
                 Console.WriteLine("\nContents of T3integers:\n" + text);
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                Console.WriteLine("File not found (FileNotFoundException)");
+                Console.WriteLine(ex.Message);
             }
             // Read doubles from file
             try
@@ -89,9 +89,9 @@ namespace T03
                 string text = File.ReadAllText("T3doubles.txt");
                 Console.WriteLine("\nContents of T3doubles:\n" + text);
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                Console.WriteLine("File not found (FileNotFoundException)");
+                Console.WriteLine(ex.Message);
             }
         }
     }
