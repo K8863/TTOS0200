@@ -53,27 +53,27 @@ namespace T03
                 }
                 while (int.TryParse(s, out i) || double.TryParse(s, out d));
 
-                using (StreamWriter sw = new StreamWriter("T3integers.txt"))
+                using (StreamWriter intFile = new StreamWriter("T3integers.txt"))
                 {
                     foreach (int integer in Integers)
                     {
-                        sw.WriteLine(integer);
+                        intFile.WriteLine(integer);
                     }
                 }
-                using (StreamWriter sw = new StreamWriter("T3doubles.txt"))
+                using (StreamWriter doubleFile = new StreamWriter("T3doubles.txt"))
                 {
                     foreach (double dubbel in Doubles)
                     {
-                        sw.WriteLine(dubbel);
+                        doubleFile.WriteLine(dubbel);
                     }
                 }
                 // Read integers from file
-                string text1 = File.ReadAllText("T3integers.txt");
-                Console.WriteLine("\nContents of T3integers:\n" + text1);
+                string ints = File.ReadAllText("T3integers.txt");
+                Console.WriteLine("\nContents of T3integers:\n" + ints);
 
                 // Read doubles from file
-                string text2 = File.ReadAllText("T3doubles.txt");
-                Console.WriteLine("\nContents of T3doubles:\n" + text2);          
+                string doubles = File.ReadAllText("T3doubles.txt");
+                Console.WriteLine("\nContents of T3doubles:\n" + doubles);          
             }
             catch (Exception ex)
             {
