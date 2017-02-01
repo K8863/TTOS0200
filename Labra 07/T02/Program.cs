@@ -64,16 +64,15 @@ namespace T02
                     }
 
                     Console.WriteLine("Found {0} lines and {1} names:\n", numberOfLines, numberOfNames);
-
                     foreach (var pair in countNames)
                     {
                         Console.WriteLine("Name {0} - {1} times", pair.Key, pair.Value);
                     }
 
+                    // Alphabetically
                     var alphabeticalNames = countNames.Keys.ToList();
                     alphabeticalNames.Sort();
-                    Console.WriteLine();
-                    Console.WriteLine("Found {0} lines and {1} names, in alphabetical order:\n", numberOfLines, numberOfNames);
+                    Console.WriteLine("\nFound {0} lines and {1} names, in alphabetical order:\n", numberOfLines, numberOfNames);
                     foreach (var key in alphabeticalNames)
                     {
                         Console.WriteLine("Name {0} - {1} times", key, countNames[key]);
