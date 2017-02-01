@@ -36,7 +36,14 @@ namespace T02
     {
         static void Main(string[] args)
         {
-            NameCheck();
+            try
+            {
+                NameCheck();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         static void NameCheck()
         {

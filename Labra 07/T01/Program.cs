@@ -35,6 +35,17 @@ namespace T01
         {
             try
             {
+                TextTest();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        static void TextTest()
+        {
+            try
+            {
                 // Write input lines to file
                 StreamWriter outputFile = new StreamWriter("T1TextLines.txt");
                 string input;
@@ -51,7 +62,7 @@ namespace T01
 
                 // Read lines from file     
                 string text = File.ReadAllText("T1TextLines.txt");
-                Console.WriteLine("Contents of T1TextLines.txt:\n" + text);
+                Console.WriteLine("\nContents of T1TextLines.txt:\n" + text);
             }
             catch (Exception ex)
             {

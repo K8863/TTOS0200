@@ -38,6 +38,18 @@ namespace T03
         {
             try
             {
+                NumberTest();          
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }      
+        }
+
+        static void NumberTest()
+        {
+            try
+            {
                 double d; int i; string s;
                 List<double> Doubles = new List<double>();
                 List<int> Integers = new List<int>();
@@ -73,12 +85,12 @@ namespace T03
 
                 // Read doubles from file
                 string doubles = File.ReadAllText("T3doubles.txt");
-                Console.WriteLine("\nContents of T3doubles:\n" + doubles);          
+                Console.WriteLine("\nContents of T3doubles:\n" + doubles);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }      
+            }
         }
     }
 }

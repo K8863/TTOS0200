@@ -36,7 +36,14 @@ namespace T04
     {
         static void Main(string[] args)
         {
-            TvGuide();
+            try
+            {
+                TvGuide();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         static void TvGuide()
         {
