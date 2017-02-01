@@ -68,9 +68,9 @@ namespace T01
                 string text = File.ReadAllText("T1TextLines.txt");
                 Console.WriteLine("Contents of T1TextLines.txt:\n" + text);
             }
-            catch (FileNotFoundException)
+            catch (Exception ex)
             {
-                Console.WriteLine("File not found (FileNotFoundException)");
+                Console.WriteLine(ex.Message);
             }
         }
     }
