@@ -67,32 +67,18 @@ namespace T03
                         sw.WriteLine(dubbel);
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+                // Read integers from file
+                string text1 = File.ReadAllText("T3integers.txt");
+                Console.WriteLine("\nContents of T3integers:\n" + text1);
 
-            // Read integers from file
-            try
-            {
-                string text = File.ReadAllText("T3integers.txt");
-                Console.WriteLine("\nContents of T3integers:\n" + text);
+                // Read doubles from file
+                string text2 = File.ReadAllText("T3doubles.txt");
+                Console.WriteLine("\nContents of T3doubles:\n" + text2);          
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-            // Read doubles from file
-            try
-            {
-                string text = File.ReadAllText("T3doubles.txt");
-                Console.WriteLine("\nContents of T3doubles:\n" + text);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            }      
         }
     }
 }
