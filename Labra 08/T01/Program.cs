@@ -13,7 +13,7 @@
  *              Dice, one test throw value is 4
  *              
  *              How many times you want to throw a dice :  10000
- *               Dice is now thrown 10000 times, average is 3,4853
+ *              Dice is now thrown 10000 times, average is 3,4853
  *               
  *          +tehtävä. Tulosta lopuksi kaikkien heitettyjen lukujen esiintymismäärät.
  *          
@@ -38,12 +38,13 @@ using System.Threading.Tasks;
 
 namespace T01
 {
-    class Noppa
+    class Dice
     {
-        public Random rnd = new Random();
+        private int result;
+        private Random rnd = new Random();
         public int DiceRoll()
         {
-            int result = rnd.Next(1, 7);
+            result = rnd.Next(1, 7);
             return result;
         }
     }
@@ -53,7 +54,7 @@ namespace T01
         {
             try
             {
-                RollDice();
+                ThrowDice();
             }
             catch (Exception ex)
             {
@@ -61,13 +62,29 @@ namespace T01
             }
         }
 
-        static void RollDice()
+        static void ThrowDice()
         {
             try
             {
-                Noppa noppa = new Noppa();
+                int i;
+                int input;
+                int result;
+                float average;
+                float sum = 0;
+                Dice dice = new Dice();
 
-                Console.WriteLine("Dice, one test throw value is " + noppa.DiceRoll());
+                Console.WriteLine("Dice, one test throw value is " + dice.DiceRoll());
+
+                Console.Write("How many times do you want to throw the dice? > ");
+                input = int.Parse(Console.ReadLine());
+
+                for (i = 0; i < input; i++)
+                {
+                    result = dice.DiceRoll();
+                    sum += result;
+                }
+                average = sum / input;
+                Console.WriteLine("Dice is thrown {0} times, average is {1}", input, average);
             }
             catch (Exception ex)
             {
